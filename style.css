@@ -5,10 +5,39 @@
 }
 
 
-.open{
-    display: block;
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.Faq{
+    text-align: center;
+    margin-top: 100px;
+}
+.box_title{
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 5px 10px;
+    width: 525px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.box_desc{
+    height: 0;
+    overflow: hidden;
+    font-size: 18px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.box_desc{
-    display: none;
+.box_title i, .box_desc i{
+    margin-left: 50px
+}
+.open{
+    height: auto;
+    transition: all 2s linear;
 }

@@ -5,48 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="Faq">
+      <h1>FAQ</h1>
     <div class="box">
       <div class="box_title">
         Can I use libraries/frameworks on these projects?
+        <i class="fa-solid fa-chevron-down"></i>
       </div>
-      <p class="box_desc">
-        Yes! Our challenges provide professional designs but there are no rules
-        on what tools to use. So feel free to use anything you like to build
-        your projects.
-      </p>
+      <div class="box_desc">
+        <p>
+          Yes! Our challenges provide professional designs but there are no
+          rules on what tools to use. So feel free to use anything you like to
+          build your projects.
+        </p>
+        <i class="fa-solid fa-chevron-up"></i>
+      </div>
     </div>
     <div class="box">
       <div class="box_title">
-        Can I use libraries/frameworks on these projects?
+        How can I get help if I'm stuck on a challenge?
+        <i class="fa-solid fa-chevron-down"></i>
       </div>
-      <p class="box_desc">
-        Yes! Our challenges provide professional designs but there are no rules
-        on what tools to use. So feel free to use anything you like to build
-        your projects.
-      </p>
+      <div class="box_desc">
+        <p>
+          The best (and quickest) way to get help on a challenge is in our Slack
+          community. There are thousands of other developers in there, so it's a
+          great place to ask questions. We even have a dedicated "help" channel!
+          If you haven't joined yet, you can get an invite to our Slack
+          community here.
+        </p>
+        <i class="fa-solid fa-chevron-up"></i>
+      </div>
     </div>
     <div class="box">
       <div class="box_title">
-        Can I use libraries/frameworks on these projects?
+        Can I use these projects in my portfolio?
+        <i class="fa-solid fa-chevron-down"></i>
       </div>
-      <p class="box_desc">
-        Yes! Our challenges provide professional designs but there are no rules
-        on what tools to use. So feel free to use anything you like to build
-        your projects.
-      </p>
+      <div class="box_desc">
+        <p>
+          Definitely! Please do feel free to use whatever you build in your
+          portfolio. Helping developers add professional-looking projects to
+          their portfolio was one of the reasons we created this platform!
+        </p>
+        <i class="fa-solid fa-chevron-up"></i>
+      </div>
     </div>
+    <div class="box">
+      <div class="box_title">
+        Is there an official solution I can take a look at?
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="box_desc">
+        <p>
+          We don't provide "official" solutions for the challenges. This is
+          because there is no single perfect way to complete a challenge.
+          Instead, you're encouraged to review other people's code in the
+          community. You can learn so much by seeing how other people have
+          approached the same challenges and giving them feedback.
+        </p>
+        <i class="fa-solid fa-chevron-up"></i>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box_title">
+        Do I get a code review when I post my solution?
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="box_desc">
+        <p>
+          Frontend Mentor is a collaborative learning community where everyone
+          can give feedback to each other. If you'd like to receive feedback
+          from the community, please be sure to post a question when you submit
+          your solution. The more specific you can be, the better. Being clear
+          with your questions means you're much more likely to receive valuable
+          feedback from others.
+        </p>
+        <i class="fa-solid fa-chevron-up"></i>
+      </div>
+    </div>
+  </div>
     <script>
       let boxes = document.querySelectorAll(".box");
-      let box_title = document.querySelector(".box_title");
 
       boxes.forEach((box) => {
         box.children[0].addEventListener("click", () => {
           box.children[1].classList.toggle("open");
+          if (box.children[1].classList.contains("open")) {
+            box.children[0].style.border = "dotted gold";
+          } else {
+            box.children[0].style.border = "solid";
+          }
+        });
+        box.children[1].addEventListener("click", () => {
+          box.children[1].classList.remove("open");
+          box.children[0].style.border = "solid";
         });
       });
     </script>
+    <script
+      src="https://kit.fontawesome.com/3bedad61df.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
